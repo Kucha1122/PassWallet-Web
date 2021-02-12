@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+    display:flex;
+    flex-flow:row wrap;
+  }
+  
+  app-nav, 
+  app-home, 
+  app-aside {
+    padding: 20px;
+    margin:5px;
+  }
+  
+  app-header {
+    order:1;
+    flex:0 1 100%;
+    background: #f1b5b5;
+  }
+  
+  app-nav {
+    order:2;
+    flex: 0 1 200px;
+    background: rgb(176, 165, 199);
+  }
+  
+  app-home {
+    order:3;
+    flex: 1;
+    margin-top: 5px;
+    min-height: 100vh;
+    background: rgb(211, 216, 215);
+  }
+  
+  app-aside {
+    order:4;
+    flex:0 1 200px;
+    background: rgb(149, 180, 216);
+  }
+  
+  app-footer {
+    order:5;
+    flex:0 1 100%;
+    background: rgb(119, 120, 121);
+  }
+
+  @media (max-width: 768px) {
+    app-header, 
+    app-nav, 
+    app-home, 
+    app-aside, 
+    app-footer {
+      flex: unset;
+      width: 100%;
+    }
+  }
