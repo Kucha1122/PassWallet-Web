@@ -16,13 +16,6 @@ body {
     flex-flow:row wrap;
   }
   
-  app-nav, 
-  app-home, 
-  app-aside {
-    padding: 20px;
-    margin:5px;
-  }
-  
   app-header {
     order:1;
     flex:0 1 100%;
@@ -31,22 +24,21 @@ body {
   
   app-nav {
     order:2;
-    flex: 0 1 200px;
-    background: rgb(176, 165, 199);
+    flex: 0 1 300px;
+    background: white;
   }
   
   app-home {
     order:3;
     flex: 1;
-    margin-top: 5px;
     min-height: 100vh;
-    background: rgb(211, 216, 215);
+    background: red;
   }
   
   app-aside {
     order:4;
-    flex:0 1 200px;
-    background: rgb(149, 180, 216);
+    flex:0 1 300px;
+    background: white;
   }
   
   app-footer {

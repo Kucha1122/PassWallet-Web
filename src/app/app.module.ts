@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { AsideComponent } from './components/shared/aside/aside.component'; 
+import { MatSidenavModule } from '@angular/material/sidenav'; 
+import { MatListModule } from '@angular/material/list'; 
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { AsideComponent } from './components/shared/aside/aside.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
