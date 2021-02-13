@@ -1,5 +1,13 @@
 .main-container{
     width: 400px;
     margin: 10% auto;
-    text-align: center;
+}
+
+p.button {
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #6A1B9A;
 }

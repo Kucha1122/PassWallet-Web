@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  username: string;
+
+  constructor(private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
+    this.username = this.localStorageService.retrieve('username');
   }
 
 }

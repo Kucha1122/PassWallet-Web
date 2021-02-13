@@ -26,6 +26,7 @@ import { MatTableModule } from '@angular/material/table';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component'; 
+import { HttpClientInterceptor } from './http.client.interceptor';
 
 
 @NgModule({
@@ -60,7 +61,7 @@ import { MainComponent } from './components/main/main.component';
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
