@@ -21,6 +21,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';  
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table'; 
+import { NgxWebstorageModule } from 'ngx-webstorage';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component'; 
 
 
@@ -50,7 +54,11 @@ import { MainComponent } from './components/main/main.component';
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    HttpClientModule,
+    NgxWebstorageModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
