@@ -1,5 +1,5 @@
 export class Register {
-    username: String;
+    login: String;
     password: String;
     confirmPassword: String;
 }
