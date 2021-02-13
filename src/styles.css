@@ -11,10 +11,6 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.container {
-    display:flex;
-    flex-flow:row wrap;
-  }
   
   app-header {
     order:1;
@@ -26,13 +22,15 @@ body {
     order:2;
     flex: 0 1 300px;
     background: white;
+    
   }
   
   app-home {
     order:3;
     flex: 1;
     min-height: 100vh;
-    background: red;
+    width: 100%;
+    background: #f1f1f1;
   }
   
   app-aside {
@@ -42,7 +40,7 @@ body {
   }
   
   app-footer {
-    order:5;
+    order:4;
     flex:0 1 100%;
     background: rgb(119, 120, 121);
   }

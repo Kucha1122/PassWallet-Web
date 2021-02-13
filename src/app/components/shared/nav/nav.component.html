@@ -1,31 +1,33 @@
-<mat-nav-list>
-    <div class="profile-card">
-        <h2>User</h2>
-        <h4>user@gmail.com</h4>
-    </div>
-    <mat-divider></mat-divider>
-    <h2 matSubheader>FEATURES</h2>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
-        <mat-icon class="icon-button">home</mat-icon>
-        Dashboard
-    </a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
-        <mat-icon class="icon-button">miscellaneous_services</mat-icon>
-        Settings
-    </a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
-        <mat-icon class="icon-button">preview</mat-icon>
-        Logs
-    </a>
-    <mat-divider></mat-divider>
-    <h2 matSubheader>HELP</h2>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
-        <mat-icon class="icon-button">forum</mat-icon>
-        Support
-    </a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
-        <mat-icon class="icon-button">help_outline</mat-icon>
-        FAQ
-    </a>
-</mat-nav-list>
+<mat-drawer-container class="sidenav-container"> 
+    <mat-nav-list >
+        <div class="profile-card">
+            <h2>User</h2>
+            <h4>user@gmail.com</h4>
+        </div>
+        <mat-divider></mat-divider>
+        <h2 matSubheader>FEATURES</h2>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <mat-icon>home</mat-icon>
+            Dashboard
+        </a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <mat-icon>miscellaneous_services</mat-icon>
+            Settings
+        </a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <mat-icon>preview</mat-icon>
+            Logs
+        </a>
+        <mat-divider></mat-divider>
+        <h2 matSubheader>HELP</h2>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <mat-icon>forum</mat-icon>
+            Support
+        </a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+            <mat-icon>help_outline</mat-icon>
+            FAQ
+        </a>
+    </mat-nav-list>
+</mat-drawer-container>
   
