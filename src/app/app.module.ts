@@ -22,6 +22,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';  
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table'; 
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -59,6 +60,7 @@ import { HttpClientInterceptor } from './http.client.interceptor';
     MatTableModule,
     MatPaginatorModule,
     HttpClientModule,
+    MatSortModule,
     NgxWebstorageModule.forRoot(),
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],

@@ -1,7 +1,11 @@
 import {AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Password } from 'src/app/Models/Password';
+import { PasswordService } from 'src/app/password.service';
 
 @Component({
   selector: 'app-home',
@@ -9,31 +13,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'password', 'website', 'login', 'description'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA); 
-  
+  displayedColumns: string[] = ['id', 'passwordHash', 'website', 'login', 'description'];
+  passwords: Array<Password>;
+  dataSource: MatTableDataSource<Password>;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   ngAfterViewInit(){
-    this.dataSource.paginator = this.paginator;
+    setTimeout(() => {
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
+    });
   }
 
-  constructor() { }
+  constructor(private passwordService: PasswordService) { }
 
   ngOnInit(): void {
+    this.passwordService.getAllPasswords()
+      .subscribe(
+        data =>{
+          this.passwords = data;
+          this.dataSource = new MatTableDataSource<Password>(this.passwords);
+        }
+      )   
+  }
+
+  public doFilter = (value: string) => {
+    this.dataSource.filter = value.trim().toLocaleLowerCase();
   }
   
 
 }
-
-export interface PeriodicElement {
-  id: number;
-  password: string;
-  website: string;
-  login: string;
-  description: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, password: 'Hydrogen', website: 'onet.pl', login: 'Loginek', description: 'Opis'},
-  {id: 2, password: 'Hydrogen', website: 'wp.pl', login: 'Loginek2', description: 'Opis'}];

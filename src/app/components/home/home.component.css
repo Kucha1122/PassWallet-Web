@@ -7,15 +7,19 @@ mat-card {
 
 mat-card-title{
     text-align: left;
-    margin-left: 15px;
-    margin-top: 25px;
-    margin-bottom: 20px;
-    position: fixed;
+    margin-left: 10px;
+}
+h2{
+    display: inline-block;
+    margin-left: 10px;
+}
+.add-button {
+    margin-left: 25px
 }
 
-.add-button {
-    margin-bottom: 15px;
-    margin-left: 94%;
+.filter-field {
+    display: inline-block;
+    margin-left: 74%;
 }
 
 .example-spacer {
@@ -25,3 +29,22 @@ mat-card-title{
 mat-icon {
     margin-right: 5px;
 }
+
+.table {
+    width: 100%;
+}
+
+.mat-row {
+    height: auto;
+}
+
+.mat-cell {
+    padding: 8px 8px 8px 0;
+}
+
+td , th {
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 200px;
+}
+  
