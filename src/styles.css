@@ -24,7 +24,7 @@ body {
     
   }
   
-  app-home {
+  app-home, app-settings, app-logs,app-faq,app-support {
     order:3;
     flex: 1;
     min-height: 100vh;
@@ -47,7 +47,11 @@ body {
   @media (max-width: 768px) {
     app-header, 
     app-nav, 
-    app-home, 
+    app-home,
+    app-settings,
+    app-logs,
+    app-faq,
+    app-support, 
     app-aside, 
     app-footer {
       flex: unset;

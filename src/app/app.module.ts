@@ -28,6 +28,14 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component'; 
 import { HttpClientInterceptor } from './http.client.interceptor';
+import { MatDialogModule } from '@angular/material/dialog'; 
+import { RouterModule } from '@angular/router';
+import { AddPasswordDialogComponent } from './components/add-password-dialog/add-password-dialog.component';
+import { LogsComponent } from './components/logs/logs.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { SupportComponent } from './components/support/support.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { AddPasswordComponent } from './components/add-password/add-password.component';
 
 
 @NgModule({
@@ -40,7 +48,13 @@ import { HttpClientInterceptor } from './http.client.interceptor';
     RegisterComponent,
     NavComponent,
     AsideComponent,
-    MainComponent
+    MainComponent,
+    AddPasswordDialogComponent,
+    LogsComponent,
+    SettingsComponent,
+    SupportComponent,
+    FaqComponent,
+    AddPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +75,8 @@ import { HttpClientInterceptor } from './http.client.interceptor';
     MatPaginatorModule,
     HttpClientModule,
     MatSortModule,
+    MatDialogModule,
+    RouterModule,
     NgxWebstorageModule.forRoot(),
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
